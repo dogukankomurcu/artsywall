@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
 
     <!--首页seo标题-->
-    <title>Top China WPC Decking & Wall Panels Manufacturer-BAIJAX</title>
+    <title>Top WPC Decking & Wall Panel Supplier in Turkey – ARTSYWALL</title>
     <!--首页seo描述-->
     <meta name="description" content="Explore BAIJAX, leading China WPC decking and wall panel manufacturers. High-quality, eco-friendly building materials for your design needs." />
     <!--首页seo关键词-->
@@ -23,9 +23,121 @@
 <link href="template/baijiaxiang/pc/skin/css/global.css" rel="stylesheet" media="screen" type="text/css" />
 <link href="template/baijiaxiang/pc/skin/css/liMarquee.css" rel="stylesheet" media="screen" type="text/css" />
 <style>
-  /* Logo’yu yukarı al */
-  .header_box .logo_box {
-      margin-top: -10px;
+  /* Modern Header Dokunuşu */
+  .header_box { background: rgba(255,255,255,0.95) !important; backdrop-filter: blur(5px); box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+  .header_box .logo_box img { transition: transform 0.3s; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1)); }
+  .header_box .logo_box:hover img { transform: scale(1.05); }
+  .nav_menu_ul li a { font-weight: 500 !important; letter-spacing: 0.5px; position: relative; }
+  .nav_menu_ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: #c5a059; transition: width 0.3s; }
+  .nav_menu_ul li:hover a::after { width: 100%; }
+  .nav_menu_ul li.active a { color: #c5a059 !important; }
+  /* Kapsayıcıyı 3'lü sisteme zorlar */
+/* 3'lü Izgara Yapısı */
+.home_product_category_list ul {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+    padding: 40px 0 !important;
+}
+
+/* Sabit Asimetrik Şekil - Animasyonsuz Sabit Yapı */
+.home_product_category_list ul li { 
+    width: 100% !important;
+    margin: 0 !important;
+    /* Sabit modern mimari kesim */
+    border-radius: 40px 5px 40px 5px !important; 
+    overflow: hidden; 
+    position: relative;
+    height: 380px; 
+    background: #000;
+    transition: all 0.5s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Görsel - İlk baştaki büyüme efekti */
+.home_product_category_list ul li .pic_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.home_product_category_list ul li:hover .pic_box img {
+    transform: scale(1.1); /* Sadece hafifçe büyür */
+}
+
+/* Yazı Alanı - İlk başta beğendiğin Altın/Sarı Overlay */
+.home_product_category_list .text_box {
+    position: absolute;
+    inset: 0; /* Tüm kartı kapla */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Yazılar altta kalsın */
+    padding: 30px 20px !important;
+    /* İlk baştaki sarı/siyah degrade */
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%) !important;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+/* Üzerine gelince sarı/altın olan kısım */
+.home_product_category_list ul li:hover .text_box {
+    background: linear-gradient(to top, rgba(197, 160, 89, 0.9) 0%, rgba(197, 160, 89, 0.2) 100%) !important;
+}
+
+/* İkonlar - Beyaza dönen efekt */
+.home_product_category_list .text_box img {
+    width: 35px !important;
+    margin-bottom: 12px;
+    filter: brightness(0) invert(1); /* İkonları beyaz yapar */
+    transition: all 0.4s ease;
+}
+
+/* Başlıklar */
+.home_product_category_list h3 { 
+    color: #ffffff !important; 
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Hover'da kartın sadece hafif yükselmesi (yamulma yok) */
+.home_product_category_list ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(197, 160, 89, 0.3);
+}
+
+/* Mobil Ayarlar */
+@media (max-width: 992px) {
+    .home_product_category_list ul { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+    .home_product_category_list ul { grid-template-columns: repeat(1, 1fr) !important; }
+}
+.modern_btn {
+      border: 2px solid #c5a059 !important;
+      background: transparent !important;
+      color: #d89e34 !important;
+      border-radius: 50px !important; /* Yuvarlak buton */
+      padding: 12px 35px !important;
+      font-weight: 600;
+      transition: all 0.3s !important;
+  }
+  .modern_btn:hover {
+      background: #c5a059 !important;
+      color: #fff !important;
+      box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+  }
+  .home_section_about_top { padding: 100px 0 !important; background: #fdfdfd; }
+  .home_section_about_conter .right_box .text_box p { 
+      font-size: 1.1rem; 
+      line-height: 1.8; 
+      color: #555; 
+      margin-bottom: 20px;
+      border-left: 3px solid #c5a059;
+      padding-left: 20px;
   }
 </style>
 
@@ -549,7 +661,7 @@
                         <div class="page_title_box">
                             <h2>PRODUCT CENTER</h2>
                         </div>
-                                                 <a class="link_box" href="WoodGrain/index.html">View More</a>
+                                                 <a class="link_box modern_btn" href="WoodGrain/index.html">View More</a>
                              
                         <div class="home_product_category_list">
                             <ul class="clearfix">
