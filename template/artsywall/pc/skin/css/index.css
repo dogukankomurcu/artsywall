@@ -75,6 +75,42 @@ body {
 .index_header_box .header_middle .conter_box{
     width: 90%;
 }
+/* Logo container: her ekranda dikey ortalama */
+.logo_box {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Link de kutuyu doldursun ki hizalama tutarlı olsun */
+.logo_box .logo_link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+@media (min-width: 769px) {
+  .logo_box .logo_link {
+    margin-left: -16px;
+    margin-top: -14px;
+  }
+}
+
+/* Logo: taşmadan sığsın */
+.logo_box .logo_img {
+  display: block;
+  width: auto;
+  height: 55px;      /* desktop için varsayılan */
+  max-height: 100%;
+}
+
+/* Mobilde header daha kısa olabildiği için logo biraz küçülsün */
+@media (max-width: 768px) {
+  .logo_box .logo_img {
+    height: 45px;
+  }
+}
+
 .header_middle .conter_box .logo_box{
     float: left;
     display: block;
