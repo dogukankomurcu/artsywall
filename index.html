@@ -23,12 +23,38 @@
 <link href="template/artsywall/pc/skin/css/global.css" rel="stylesheet" media="screen" type="text/css" />
 <link href="template/artsywall/pc/skin/css/liMarquee.css" rel="stylesheet" media="screen" type="text/css" />
 <style>
+
+    .home_banner_section,
+.home_banner_section *,
+.swiper-container,
+.swiper-slide {
+  transition: none !important;
+}
+
+.home_banner_section .swiper-slide img {
+  display: block !important;
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 600px !important;
+  object-fit: cover !important;
+}
   /* Modern Header Dokunuşu */
   .header_box { background: rgba(255,255,255,0.95) !important; backdrop-filter: blur(5px); box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
   .header_box .logo_box img { transition: transform 0.3s; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1)); }
   .header_box .logo_box:hover img { transform: scale(1.05); }
   .nav_menu_ul li a { font-weight: 500 !important; letter-spacing: 0.5px; position: relative; }
   .nav_menu_ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: #c5a059; transition: width 0.3s; }
+  .nav_menu_ul li a {
+    font-size: 14px !important;    /* 13px yerine 15px yap */
+    padding: 0 12px !important;    /* 8px yerine 12px yap */
+}
+
+@media (max-width: 1200px) {
+    .nav_menu_ul li a {
+        font-size: 12px !important;    /* 12px yerine 14px yap */
+        padding: 0 8px !important;    /* 6px yerine 10px yap */
+    }
+}
   .nav_menu_ul li:hover a::after { width: 100%; }
   .nav_menu_ul li.active a { color: #c5a059 !important; }
 
@@ -79,6 +105,36 @@
   position: relative;
   z-index: 1;
 }
+.home_header_box,
+.index_header_box,
+.page_home_header_box {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.header_box {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Banner üst boşluğunu sıfırla */
+.home_banner_section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Wrapper boşluklarını kontrol et */
+.wrapper_main {
+  padding-top: 0 !important;
+}
+
+/* Sadece desktop'ta negatif margin kullan */
+@media (min-width: 769px) {
+  .home_banner_section {
+    margin-top: -20px !important;
+  }
+}
+
 </style>
 
 <script type="text/javascript" src="public/static/common/js/ey_global5644.js?v=v1.7.3"></script>
@@ -517,7 +573,7 @@
 
 
         <!-- banner -->
-        <div class="home_banner_section">
+        <div class="home_banner_section ignore">
             <div class="swiper-container">
                 <div class="swiper-wrapper clearfix">
                     <div class="swiper-slide">
@@ -1133,7 +1189,9 @@
 
     translate.setUseVersion2();
     translate.setAutoDiscriminateLocalLanguage();//设置用户第一次用时，自动识别其所在国家的语种进行切换
-
+    translate.ignore.class.push('home_banner_section');
+    translate.ignore.class.push('swiper-container');
+    translate.ignore.class.push('swiper-slide');
     var default_language = "english";
     if (default_language) {
         translate.language.setDefaultTo(default_language);
@@ -1222,6 +1280,32 @@
         }
       }
     });
+</script>
+
+<script>
+// Çeviri öncesi banner boyutlarını kaydet
+document.addEventListener('DOMContentLoaded', function() {
+    const bannerSection = document.querySelector('.home_banner_section');
+    const swiperContainer = document.querySelector('.home_banner_section .swiper-container');
+    
+    if (bannerSection) {
+        bannerSection.style.cssText += 'height: 100vh !important; min-height: 600px !important;';
+    }
+    
+    if (swiperContainer) {
+        swiperContainer.style.cssText += 'width: 100% !important; height: 100% !important;';
+    }
+    
+    // Translate sonrası düzeltme
+    setTimeout(function() {
+        if (bannerSection) {
+            bannerSection.style.cssText += 'height: 100vh !important; min-height: 600px !important;';
+        }
+        if (swiperContainer) {
+            swiperContainer.style.cssText += 'width: 100% !important; height: 100% !important;';
+        }
+    }, 1000);
+});
 </script>
 
 <script language="javascript" src="weapp/StationTranslation/template/skin/js/translate.js"></script>
